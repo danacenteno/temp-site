@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Dana Centeno | Front-End Developer & Designer</title>
+	<title>&#10024 Dana Centeno | Front-End Web Developer &#10024</title>
 
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet"
@@ -35,9 +35,35 @@
 	<header>
 
 		<div class="intro wrapper">
-			<h1 class="animated fadeInDown"><span>Hi there!</span> I'm Dana Centeno, a front-end developer & UX designer based in Toronto. Beautiful, functional and accessible digital experiences are my jam. &#10024</h1>
+			<h1 class="animated fadeInDown"><span>Hi there!</span> I'm Dana Centeno, a front-end web developer based in Toronto, Canada. Beautiful, functional and accessible digital experiences are my jam. &#10024</h1>
+
+			<div class="small-blurb animated fadeInUp">
+				<p>Thanks for stopping by! While you're here, why not check out some of <a href="#" class="recent-work">my work</a> or <a href="mailto:danamariecenteno@gmail.com?Subject=Hey Dana! Let%27s make some cool stuff together!">say hello</a>? &#128640</p>
+			</div>
 		</div>
 	</header>
+	
+	<div class="work">
+		<div class="work-wrapper">
+			<button aria-label="Close" class="close-btn" target="_blank"><i class="fas fa-times"></i></button>
+			<ul>
+				<li>Client Work</li>
+				<li><a href="https://hatake-global.com/" target="_blank">Hatake Global</a></li>
+				<li><a href="https://www.hydroone.com/" target="_blank">Hydro One</a></li>
+				<li><a href="http://www.pursuitmb.com/" target="_blank">Pursuit Advisory</a></li>
+				<li><a href="http://vanbridgerjenner.com/" target="_blank">VanBridger Jenner LLC.</a></li>
+			</ul>
+	
+			<ul>
+				<li>Personal Projects</li>
+				<li><a href="https://spacem-ipsum.netlify.com/">Spacem Ipsum</a></li>
+				<li><a href="https://www.behance.net/gallery/65288299/Beacon-Transit-App" target="_blank">Beacon App Design</a></li>
+				<li><a href="https://www.behance.net/gallery/65332621/PurposeBuilt-Time-Tracker" target="_blank">P/B Time Tracker Design</a></li>
+				<li><a href="https://sevendeadlysloths.netlify.app/" target="_blank">Seven Deadly Sloths</a></li>
+			</ul>
+		</div>
+	</div>
+
 
 	<footer>
 		<div class="social animated fadeIn">
@@ -57,7 +83,7 @@
 				<i caria-hidden="true" class="fab fa-linkedin-in" title="Go to Dana's LinkedIn profile"></i>
 			</a>
 
-			<a aria-label="Contact through email" href="mailto:hello@danacenteno.com?Subject=Hey Dana! Let%27s make some cool stuff together!">
+			<a aria-label="Contact through email" href="mailto:danamariecenteno@gmail.com?Subject=Hey Dana! Let%27s make some cool stuff together!">
 				<i aria-hidden="true" class="fa fa-envelope"title="Contact Dana through email"></i>
 			</a>
 		</div>
@@ -67,15 +93,12 @@
 
 	<script>
 		$(document).ready(function(){
-			console.log("ready, Freddie!");
-
-			$(".recent-work").on("click", function(e){
-				e.preventDefault();
-				$(".work-wrapper").fadeIn(400).addClass("show");
+			$(".recent-work").on("click", function(){
+				$(".work-wrapper").fadeTo("slow", 1).addClass("show");
 			});
 
-			$(".close-btn").on("click",function(){
-				$(".work-wrapper").fadeOut(400).addClass("hide");
+			$(".close-btn").on("click", function(){
+				$(".work-wrapper").fadeOut(400).removeClass("show");
 			});
 		});
 	</script>
